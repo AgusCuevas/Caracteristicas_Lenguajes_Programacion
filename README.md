@@ -1,1 +1,1 @@
-# Caracteristicas_Lenguasjes_Programacion
+# Caracteristicas_Lenguajes_Programacion
