@@ -26,39 +26,41 @@ Los paradigmas de programación ofrecen diferentes estilos y filosofías para ab
 - Este resumen proporciona una visión general de la introducción a los lenguajes de programación, abarcando su definición, evolución histórica, la persistencia de los lenguajes de bajo nivel y los principales paradigmas que moldean la forma en que escribimos software hoy en día.
 
 ```mermaid
-    graph TD
-    subgraph "Lenguajes de Programación (LP)"
+flowchart TD
+    subgraph DEF["Definición"]
         direction LR
-        A["Definición"] --> B["Comunicación entre humanos y computadoras"]
-        A --> C["Especificación de tareas computacionales"]
-        A --> D["Notación para escribir programas"]
+        C["Especificación de tareas computacionales"]
+        D["Notación para escribir programas"]
+        E["herramientas fundamentales para la comunicación entre humanos y computadoras"]
     end
-
-    subgraph "Historia de los LP"
+    
+    subgraph HLP["Historia de los LP"]
         direction TB
-        H1["Antes de 1940"] --> H2["Programación mediante cableado"]
-        H2 --> H3["1940: Uso de códigos (Von Neumann)"]
-        H3 --> H4["Evolución: Lenguaje ensamblador"]
+        H1["Antes de 1940: Programación mediante cableado"] 
+        H1 --> H3["Década de 1940: Uso de códigos (Von Neumann). Evita el cableado"]
+        H3 --> H4["Lenguaje ensamblador, lenguaje de bajo nivel que facilitaba la programación mediante abreviaturas "]
         H4 --> H5["Adición de construcciones de alto nivel"]
         H5 --> H6["Transición a lenguajes de alto nivel"]
-        H6 --> H7["Independencia de la máquina"]
+        H6 --> H7["Independencia de la máquina: Los LP modernos se independizaron de la máquina"]
     end
 
-    subgraph "Paradigmas de Programación"
+    subgraph PDP["Paradigmas de Programación"]
         direction TB
         P1["Paradigma Imperativo"] --> PI1["Secuencia de instrucciones"]
-        PI1 --> PI2["Uso de variables, selección e iteración"]
+        PI1 --> PI2["Uso de variables, selección e iteración"] --> PI3["C, Fortran, Pascal"]
 
         P2["Paradigma Orientado a Objetos"] --> POO1["Clases y objetos"]
-        POO1 --> POO2["Encapsulamiento, polimorfismo, herencia"]
+        POO1 --> POO2["Encapsulamiento, polimorfismo, herencia"] --> POO3["Java, Python, C++"]
 
         P3["Paradigma Funcional"] --> PF1["Cálculo lambda y funciones como parámetros"]
-        PF1 --> PF2["Evaluación diferida y transparencia referencial"]
+        PF1 --> PF2["Evaluación diferida y transparencia referencial"] --> PF3["Haskell, Scala, F#"]
 
         P4["Paradigma Lógico"] --> PL1["Hechos y reglas (Cláusulas de Horn)"]
-        PL1 --> PL2["Deducción mediante unificación y backtracking"]
+        PL1 --> PL2["Deducción mediante unificación y backtracking"] --> PL3["Prolog, Mercury"]
     end
 
-    LP["Lenguajes de Programación (LP)"] --> H1
-    LP --> P1
+    LP["Lenguajes de Programación (LP)"] --> DEF
+    LP --> HLP
+    LP --> PDP
+
 ```
