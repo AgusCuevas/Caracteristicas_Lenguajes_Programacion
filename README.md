@@ -20,6 +20,7 @@ Los paradigmas de programación ofrecen diferentes estilos y filosofías para ab
 ⦁	Lógico: Se basa en la lógica formal. Los programas se construyen mediante cláusulas de Horn, que expresan hechos y reglas. La resolución de problemas se realiza mediante la deducción lógica, utilizando mecanismos como la unificación y el backtracking.
 Este resumen proporciona una visión general de la introducción a los lenguajes de programación, abarcando su definición, evolución histórica, la persistencia de los lenguajes de bajo nivel y los principales paradigmas que moldean la forma en que escribimos software hoy en día.
 
+```mermaid
     graph TD
     subgraph "Lenguajes de Programación (LP)"
         direction LR
@@ -55,3 +56,4 @@ Este resumen proporciona una visión general de la introducción a los lenguajes
 
     LP["Lenguajes de Programación (LP)"] --> H1
     LP --> P1
+```
