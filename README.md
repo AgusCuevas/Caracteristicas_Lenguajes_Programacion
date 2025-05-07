@@ -153,9 +153,9 @@ Operación    = Expresión Operador Expresión
 
 Operador     = ➕ | ➖ | ✖️  | ➗
 
-Variable     = letra { letra | digito | _ }
+Variable     = letra { letra | digito | _ }*
 
-Número       = [ + | - ] digito { digito }
+Número       = [ + | - ] digito { digito }*
 
 Texto        = { letra* | digito* } 
 
