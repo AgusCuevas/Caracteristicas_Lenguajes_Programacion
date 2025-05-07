@@ -157,7 +157,7 @@ Variable     = letra { letra | digito | _ }
 
 Número       = [ + | - ] digito { digito }
 
-Texto        = { letra | digito } 
+Texto        = { letra* | digito* } 
 
 letra       =  A | ... | Z | a | ... | z
 
@@ -208,7 +208,7 @@ letraodigito : uno de letra digito
 
 letra : una de a-z A-Z
 
-cadena : *(numero) *(letra)
+cadena : uno de numero letra
 ```
 ---
 
