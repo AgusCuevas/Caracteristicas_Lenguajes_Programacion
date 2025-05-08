@@ -69,19 +69,19 @@ Un experimento sobre cognición y programación
 ## 1. GIC (Gramática Independiente del Contexto) para Emojicode
 
 ```plaintext
-<Programa>       → 🏁 <Bloque> 🍉
-<Bloque>         → <Instrucción> <Bloque> | λ
-<Instrucción>    → <Imprimir> | <Declaración> | <Bucle> | <Condicional>
-<Imprimir>       → 😀 <Expresión>
-<Declaración>    → 🍿 <Variable> <Expresión>
-<Bucle>          → 🔁 <Expresión> <Bloque>
-<Condicional>    → 🤔 <Expresión> <Bloque> [🙁 <Bloque>] 
-<Expresión>      → 🔤<Texto>🔤 | <Variable> | <Número> | <Operación>
-<Operación>      → <Expresión> <Operador> <Expresión>
-<Operador>       → ➕ | ➖ | ✖️ | ➗
-<Variable>       → A|B|C| ... |Z|a|b|c|...|z
-<Número>         → 0|1|...|9
-<Texto>          → <Variable> | <Número>     
+Programa       → 🏁 Bloque 🍉
+Bloque         → Instrucción Bloque | λ
+Instrucción    → Imprimir | Declaración | Bucle | Condicional
+Imprimir       → 😀 Expresión
+Declaración    → 🍿 Variable Expresión
+Bucle          → 🔁 Expresión Bloque
+Condicional    → 🤔 Expresión Bloque | 🤔 Expresión Bloque 🙁 Bloque 
+Expresión      → 🔤Texto🔤 | Variable | Número | Operación
+Operación      → Expresión Operador Expresión
+Operador       → ➕ | ➖ | ✖️ | ➗
+Variable       → A|B|C| ... |Z|a|b|c|...|z
+Número         → 0|1|...|9
+Texto          → Variable | Número     
 ```
 
 ---
