@@ -268,4 +268,4 @@ graph TD
 ```
 
 ## Diagrama sintáctico de EMOJICODE
-![Descripción de la imagen](/Ejercicio%2014.jpeg)
+![image]([/Ejercicio%2014.jpeg](https://github.com/AgusCuevas/Caracteristicas_Lenguajes_Programacion/blob/main/Ejercicio%2014.jpeg))
