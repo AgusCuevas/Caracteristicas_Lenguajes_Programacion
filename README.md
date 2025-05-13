@@ -217,3 +217,85 @@ while x > 0:
 ```
 
 ---
+# TP 4
+## Arbol de Análisis Sintáctico de un Programa Fuente
+``` mermaid
+graph TD
+    P[Programa Principal] --> INICIO(🏁 Inicio)
+    P --> BLOQUE_PRINCIPAL[Bloque Principal]
+    P --> FIN(🍉 Fin)
+
+    %% Declaración inicial
+    BLOQUE_PRINCIPAL --> DECLARACION_INICIAL[Declaración de variable 🔢]
+    DECLARACION_INICIAL --> ASIGNACION_INICIAL(🍿 Asignar)
+    DECLARACION_INICIAL --> VAR_INICIAL[i]
+    DECLARACION_INICIAL --> VALOR_INICIAL[0]
+
+    %% Bucle
+    BLOQUE_PRINCIPAL --> BUCLE_WHILE["Bucle 🔁"]
+    BUCLE_WHILE --> CONDICION_BUCLE["Condición"]
+    CONDICION_BUCLE --> VAR_BUCLE[i]
+    CONDICION_BUCLE --> OPERADOR_MENORIGUAL[<=]
+    CONDICION_BUCLE --> LIMITE_BUCLE[100]
+
+    %% Bloque del bucle
+    BUCLE_WHILE --> BLOQUE_BUCLE[Bloque del bucle 🔁]
+
+    %% Condicional paridad
+    BLOQUE_BUCLE --> CONDICIONAL_PARIDAD[Condicional 🤔]
+    CONDICIONAL_PARIDAD --> EXPRESION_PARIDAD["Evaluar: i % 2 == 0"]
+
+    EXPRESION_PARIDAD --> OPERACION_MODULO["Módulo (i % 2)"]
+    OPERACION_MODULO --> VAR_I_MOD[i]
+    OPERACION_MODULO --> NUM_MOD[2]
+
+    EXPRESION_PARIDAD --> COMPARACION_IGUAL["Comparar con 0"]
+    COMPARACION_IGUAL --> VALOR_IGUAL[0]
+
+    %% Si es par
+    CONDICIONAL_PARIDAD --> BLOQUE_SI_PAR[Bloque Then: Si es par]
+    BLOQUE_SI_PAR --> IMPRIMIR_PAR[Imprimir: 🔤Par🔤]
+
+    %% Si es impar
+    CONDICIONAL_PARIDAD --> BLOQUE_SINO_IMPAR[😀 Bloque Else:  Si es impar]
+    BLOQUE_SINO_IMPAR --> IMPRIMIR_IMPAR[Imprimir: 🔤Impar🔤]
+
+    %% Incremento del índice
+    BLOQUE_BUCLE --> INCREMENTO_CONTADOR[Incrementar contador 🔢]
+    INCREMENTO_CONTADOR --> ASIGNAR_NUEVO_VALOR(🍿 Asignar)
+    INCREMENTO_CONTADOR --> VAR_INCREMENTO[i]
+    INCREMENTO_CONTADOR --> EXPRESION_INCREMENTO["i + 1"]
+```
+
+## Diagrama sintáctico de EMOJICODE
+``` mermaid
+flowchart TD
+    Programa["Programa"] --> B1["🏁 Bloque 🍉"]
+    B1 --> B2["Instrucción Bloque | λ"]
+    B2 --> I1["Imprimir: 😀 Expresión"]
+    B2 --> I2["Declaración: 🍿 Variable Expresión"]
+    B2 --> I3["Asignación: 🖍 Variable Expresión"]
+    B2 --> I4["Bucle: 🔁 Expresión Bloque"]
+    B2 --> I5["Condicional: 🤔 Expresión Bloque (🙁 Bloque)?"]
+    
+    I1 --> E["Expresión"]
+    I2 --> E
+    I3 --> E
+    I4 --> E
+    I5 --> E
+    
+    E --> T["🔤Texto🔤"]
+    E --> V["Variable"]
+    E --> N["Número"]
+    E --> O["Operación"]
+    
+    O --> E
+    O --> Op["Operador: ➕ | ➖ | ✖️ | ➗"]
+    
+    V --> Id["Identificador"]
+    Id --> L["Letra (A-Za-z)"]
+    Id --> D["Dígito (0-9)"]
+    
+    N --> D+
+    T --> C["Carácter (Letra | Dígito | Símbolo)"]
+```
