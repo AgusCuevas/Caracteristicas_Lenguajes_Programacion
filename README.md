@@ -268,34 +268,4 @@ graph TD
 ```
 
 ## Diagrama sintáctico de EMOJICODE
-``` mermaid
-flowchart TD
-    Programa["Programa"] --> B1["🏁 Bloque 🍉"]
-    B1 --> B2["Instrucción Bloque | λ"]
-    B2 --> I1["Imprimir: 😀 Expresión"]
-    B2 --> I2["Declaración: 🍿 Variable Expresión"]
-    B2 --> I3["Asignación: 🖍 Variable Expresión"]
-    B2 --> I4["Bucle: 🔁 Expresión Bloque"]
-    B2 --> I5["Condicional: 🤔 Expresión Bloque (🙁 Bloque)?"]
-    
-    I1 --> E["Expresión"]
-    I2 --> E
-    I3 --> E
-    I4 --> E
-    I5 --> E
-    
-    E --> T["🔤Texto🔤"]
-    E --> V["Variable"]
-    E --> N["Número"]
-    E --> O["Operación"]
-    
-    O --> E
-    O --> Op["Operador: ➕ | ➖ | ✖️ | ➗"]
-    
-    V --> Id["Identificador"]
-    Id --> L["Letra (A-Za-z)"]
-    Id --> D["Dígito (0-9)"]
-    
-    N --> D+
-    T --> C["Carácter (Letra | Dígito | Símbolo)"]
-```
+![Ejercicio 14](https://github.com/user-attachments/assets/0245208a-cb38-458e-9663-3e95dd192a9c)
