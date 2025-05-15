@@ -75,7 +75,7 @@ Instrucción    → Imprimir | Declaración | Bucle | Condicional
 Imprimir       → 😀 Expresión
 Declaración    → 🍿 Variable Expresión
 Bucle          → 🔁 Expresión Bloque
-Condicional    → 🤔 Expresión Bloque | 🤔 Expresión Bloque 🙁 Bloque 
+Condicional    → 🤔 Operación Bloque | 🤔 Operación Bloque 🙁 Bloque 
 Expresión      → 🔤Texto🔤 | Variable | Número | Operación
 Operación      → Expresión Operador Expresión
 Operador       → ➕ | ➖ | ✖️ | ➗
@@ -96,7 +96,7 @@ Texto          → Variable | Número
 <Imprimir>    ::= 😀 <Expresión>
 <Declaracion> ::= 🍿 <Variable> <Expresión>
 <Bucle>       ::= 🔁 <Expresión> <Bloque>
-<Condicional> ::= 🤔 <Expresión> <Bloque> [🙁 <Bloque>]
+<Condicional> ::= 🤔 <Operación> <Bloque> [🙁 <Bloque>]
 <Expresión>   ::= 🔤<Texto>🔤 | <Variable> | <Número> | <Operación>
 <Operación>   ::= <Expresión> <Operador> <Expresión>
 <Operador>    ::= ➕ | ➖ | ✖️ | ➗
@@ -121,7 +121,7 @@ Declaración  = 🍿 Variable Expresión
 
 Bucle        = 🔁 Expresión Bloque
 
-Condicional  = 🤔 Expresión Bloque [🙁 Bloque]
+Condicional  = 🤔 Operación Bloque [🙁 Bloque]
 
 Expresión    = 🔤Texto🔤 | Variable | Número | Operación | "(" Expresión ")"
 
@@ -156,7 +156,7 @@ bloque : instruccion
 instruccion : 😀 expresion  
               🍿 variable expresion  
               🔁 expresion bloque  
-              🤔 expresion bloque 🙁 bloque
+              🤔 Operación bloque 🙁 bloque
 
 expresion : 🔤 cadena 🔤 
             numero
