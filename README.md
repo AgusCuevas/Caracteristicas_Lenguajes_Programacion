@@ -70,12 +70,12 @@ Un experimento sobre cognición y programación
 
 ```plaintext
 Programa       → 🏁 Bloque 🍉
-Bloque         → Instrucción Bloque | λ
-Instrucción    → Imprimir | Declaración | Bucle | Condicional
+Bloque         → Instrucción Bloque | Instrucción | λ
+Instrucción    → Imprimir | Declaración | Bucle | Condicional | λ
 Imprimir       → 😀 Expresión
 Declaración    → 🍿 Variable Expresión
-Bucle          → 🔁 Expresión Bloque
-Condicional    → 🤔 Operación Bloque | 🤔 Operación Bloque 🙁 Bloque 
+Bucle          → 🔁 Expresión ( Bloque )
+Condicional    → 🤔 Operación ( Bloque ) | 🤔 Operación ( Bloque ) 🙁 ( Bloque ) 
 Expresión      → 🔤Texto🔤 | Variable | Número | Operación
 Operación      → Expresión Operador Expresión
 Operador       → ➕ | ➖ | ✖️ | ➗
