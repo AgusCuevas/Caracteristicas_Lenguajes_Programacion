@@ -221,50 +221,65 @@ while x > 0:
 ## Arbol de Análisis Sintáctico de un Programa Fuente
 ``` mermaid
 graph TD
-    P[Programa Principal] --> INICIO(🏁 Inicio)
-    P --> BLOQUE_PRINCIPAL[Bloque Principal]
-    P --> FIN(🍉 Fin)
-
-    %% Declaración inicial
-    BLOQUE_PRINCIPAL --> DECLARACION_INICIAL[Declaración de variable 🔢]
-    DECLARACION_INICIAL --> ASIGNACION_INICIAL(🍿 Asignar)
-    DECLARACION_INICIAL --> VAR_INICIAL[i]
-    DECLARACION_INICIAL --> VALOR_INICIAL[0]
-
-    %% Bucle
-    BLOQUE_PRINCIPAL --> BUCLE_WHILE["Bucle 🔁"]
-    BUCLE_WHILE --> CONDICION_BUCLE["Condición"]
-    CONDICION_BUCLE --> VAR_BUCLE[i]
-    CONDICION_BUCLE --> OPERADOR_MENORIGUAL[<=]
-    CONDICION_BUCLE --> LIMITE_BUCLE[100]
-
-    %% Bloque del bucle
-    BUCLE_WHILE --> BLOQUE_BUCLE[Bloque del bucle 🔁]
-
-    %% Condicional paridad
-    BLOQUE_BUCLE --> CONDICIONAL_PARIDAD[Condicional 🤔]
-    CONDICIONAL_PARIDAD --> EXPRESION_PARIDAD["Evaluar: i % 2 == 0"]
-
-    EXPRESION_PARIDAD --> OPERACION_MODULO["Módulo (i % 2)"]
-    OPERACION_MODULO --> VAR_I_MOD[i]
-    OPERACION_MODULO --> NUM_MOD[2]
-
-    EXPRESION_PARIDAD --> COMPARACION_IGUAL["Comparar con 0"]
-    COMPARACION_IGUAL --> VALOR_IGUAL[0]
-
-    %% Si es par
-    CONDICIONAL_PARIDAD --> BLOQUE_SI_PAR[Bloque Then: Si es par]
-    BLOQUE_SI_PAR --> IMPRIMIR_PAR[Imprimir: 🔤Par🔤]
-
-    %% Si es impar
-    CONDICIONAL_PARIDAD --> BLOQUE_SINO_IMPAR[😀 Bloque Else:  Si es impar]
-    BLOQUE_SINO_IMPAR --> IMPRIMIR_IMPAR[Imprimir: 🔤Impar🔤]
-
-    %% Incremento del índice
-    BLOQUE_BUCLE --> INCREMENTO_CONTADOR[Incrementar contador 🔢]
-    INCREMENTO_CONTADOR --> ASIGNAR_NUEVO_VALOR(🍿 Asignar)
-    INCREMENTO_CONTADOR --> VAR_INCREMENTO[i]
-    INCREMENTO_CONTADOR --> EXPRESION_INCREMENTO["i + 1"]
+    START[🏁] --> B1[Bloque]
+    
+    B1 --> I1[Instrucción]
+    I1 --> D1[Declaración]
+    D1 --> POP[🍿]
+    D1 --> VAR[Variable]
+    VAR --> i[i]
+    D1 --> EXPR1[Expresión]
+    EXPR1 --> NUM[Numero]
+    NUM --> cero[0]
+    
+    I1 --> B2[Bloque]
+    B2 --> I2[Instrucción]
+    I2 --> C1[Condicional]
+    C1 --> emoji1[🤔]
+    
+    C1 --> OP1[Operación]
+    OP1 --> EXPR2[Expresión]
+    EXPR2 --> VAR2[Variable]
+    VAR2 --> i2[i]
+    OP1 --> OPER[Operador]
+    OPER --> div[➗]
+    OP1 --> EXPR3[Expresión]
+    EXPR3 --> NUM2[Numero]
+    NUM2 --> dos[2]
+    
+    C1 --> parIzq1["("]
+    
+    C1 --> B3[Bloque]
+    B3 --> I3[Instrucción]
+    I3 --> IMP1[Imprimir]
+    IMP1 --> emoji2[😀]
+    IMP1 --> EXPR4[Expresión]
+    EXPR4 --> comilla1[🔤]
+    EXPR4 --> TXT1[Texto]
+    TXT1 --> par["Par"]
+    EXPR4 --> comilla2[🔤]
+    
+    C1 --> parDer1[")"]
+    
+    I2 --> B4[Bloque]
+    B4 --> I4[Instrucción]
+    I4 --> C2[Condicional]
+    C2 --> emoji3[🙁]
+    
+    C2 --> parIzq2["("]
+    
+    C2 --> B5[Bloque]
+    B5 --> I5[Instrucción]
+    I5 --> IMP2[Imprimir]
+    IMP2 --> EXPR5[Expresión]
+    EXPR5 --> comilla3[🔤]
+    EXPR5 --> TXT2[Texto]
+    TXT2 --> impar["Impar"]
+    EXPR5 --> comilla4[🔤]
+    
+    C2 --> parDer2[")"]
+    
+    START --> END[🍉]
 ```
 
 ## Diagrama sintáctico de EMOJICODE
