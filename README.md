@@ -78,7 +78,7 @@ Bucle          → 🔁 Expresión ( Bloque )
 Condicional    → 🤔 Operación ( Bloque ) | 🤔 Operación ( Bloque ) 🙁 ( Bloque ) 
 Expresión      → 🔤Texto🔤 | Variable | Número | Operación
 Operación      → Expresión Operador Expresión
-Operador       → ➕ | ➖ | ✖️ | ➗ | ✍️
+Operador       → ➕ | ➖ | ✖️ | ➗ | ✍️ | 🚮
 Variable       → A|B|C| ... |Z|a|b|c|...|z
 Número         → 0|1|...|9
 Texto          → Variable | Número     
@@ -99,7 +99,7 @@ Texto          → Variable | Número
 <Condicional> ::= 🤔 <Operación> <Bloque> [🙁 <Bloque>]
 <Expresión>   ::= 🔤<Texto>🔤 | <Variable> | <Número> | <Operación>
 <Operación>   ::= <Expresión> <Operador> <Expresión>
-<Operador>    ::= ➕ | ➖ | ✖️ | ➗ | ✍️
+<Operador>    ::= ➕ | ➖ | ✖️ | ➗ | ✍️ | 🚮
 <Variable>    ::= A|B|C| ... |Z|a|b|c|...|z
 <Número>      ::= 0|1|...|9
 <Texto>       ::= <Variable> | <Número> 
@@ -127,7 +127,7 @@ Expresión    = 🔤Texto🔤 | Variable | Número | Operación | "(" Expresión
 
 Operación    = Expresión Operador Expresión
 
-Operador     = ➕ | ➖ | ✖️  | ➗ | ✍️
+Operador     = ➕ | ➖ | ✖️  | ➗ | ✍️ | 🚮
 
 Variable     = letra { letra | digito | _ }*
 
@@ -175,7 +175,7 @@ operacion : expresion
             operador 
             expresion
 
-operador : uno de ➕ ➖ ✖️ ➗ ✍️
+operador : uno de ➕ ➖ ✖️ ➗ ✍️ 🚮
 
 variable : letra _op 
            letraodigito _op
@@ -256,7 +256,7 @@ graph TD
     EXPR2 --> VAR2[Variable]
     VAR2 --> i2[i]
     OP1 --> OPER[Operador]
-    OPER --> div[➗]
+    OPER --> div[🚮]
     OP1 --> EX2[Expresión]
     EX2 --> OP2[Operación]
     OP2 --> EXPR6[Expresión]
