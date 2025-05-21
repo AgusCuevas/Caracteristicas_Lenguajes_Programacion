@@ -305,4 +305,4 @@ graph TD
 
 ![image](https://github.com/AgusCuevas/Caracteristicas_Lenguajes_Programacion/blob/main/Diagramas%20sint%C3%A1cticos%20P2.jpeg)
 
-![image](https://github.com/AgusCuevas/Caracteristicas_Lenguajes_Programacion/blob/main/Diagramas%20sint%C3%A1cticos%20P3.jpeg)
+![image](https://github.com/AgusCuevas/Caracteristicas_Lenguajes_Programacion/blob/main/Diagramas%20sint%C3%A1cticos%20P3v2.png)
