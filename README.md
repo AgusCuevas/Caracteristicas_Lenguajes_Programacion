@@ -219,7 +219,8 @@ while x > 0:
 ---
 # TP 4
 ## Arbol de Análisis Sintáctico de un Programa Fuente
-%%🏁
+```
+🏁
   🍿 i 0
   🔁 i <= 5 (
     🤔 i ➗ 2 == ✍️ 0(
@@ -230,6 +231,8 @@ while x > 0:
     🍿 i i + 1
   )
 🍉
+```
+
 ``` mermaid
 graph TD
     START[🏁] --> B1[Bloque]
