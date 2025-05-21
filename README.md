@@ -78,7 +78,7 @@ Bucle          → 🔁 Expresión ( Bloque )
 Condicional    → 🤔 Operación ( Bloque ) | 🤔 Operación ( Bloque ) 🙁 ( Bloque ) 
 Expresión      → 🔤Texto🔤 | Variable | Número | Operación
 Operación      → Expresión Operador Expresión
-Operador       → ➕ | ➖ | ✖️ | ➗
+Operador       → ➕ | ➖ | ✖️ | ➗ | ✍️
 Variable       → A|B|C| ... |Z|a|b|c|...|z
 Número         → 0|1|...|9
 Texto          → Variable | Número     
@@ -99,7 +99,7 @@ Texto          → Variable | Número
 <Condicional> ::= 🤔 <Operación> <Bloque> [🙁 <Bloque>]
 <Expresión>   ::= 🔤<Texto>🔤 | <Variable> | <Número> | <Operación>
 <Operación>   ::= <Expresión> <Operador> <Expresión>
-<Operador>    ::= ➕ | ➖ | ✖️ | ➗
+<Operador>    ::= ➕ | ➖ | ✖️ | ➗ | ✍️
 <Variable>    ::= A|B|C| ... |Z|a|b|c|...|z
 <Número>      ::= 0|1|...|9
 <Texto>       ::= <Variable> | <Número> 
@@ -127,7 +127,7 @@ Expresión    = 🔤Texto🔤 | Variable | Número | Operación | "(" Expresión
 
 Operación    = Expresión Operador Expresión
 
-Operador     = ➕ | ➖ | ✖️  | ➗
+Operador     = ➕ | ➖ | ✖️  | ➗ | ✍️
 
 Variable     = letra { letra | digito | _ }*
 
@@ -175,7 +175,7 @@ operacion : expresion
             operador 
             expresion
 
-operador : uno de ➕ ➖ ✖️ ➗  
+operador : uno de ➕ ➖ ✖️ ➗ ✍️
 
 variable : letra _op 
            letraodigito _op
@@ -219,6 +219,17 @@ while x > 0:
 ---
 # TP 4
 ## Arbol de Análisis Sintáctico de un Programa Fuente
+%%🏁
+  🍿 i 0
+  🔁 i <= 5 (
+    🤔 i ➗ 2 == ✍️ 0(
+      😀 🔤Par🔤 i
+    ) 🙁 (
+      😀 🔤Impar🔤 i
+    )
+    🍿 i i + 1
+  )
+🍉
 ``` mermaid
 graph TD
     START[🏁] --> B1[Bloque]
@@ -243,10 +254,14 @@ graph TD
     VAR2 --> i2[i]
     OP1 --> OPER[Operador]
     OPER --> div[➗]
-    OP1 --> EXPR3[Expresión]
-    EXPR3 --> NUM2[Numero]
-    NUM2 --> dos[2]
-    
+    OP1 --> EX2[Expresión]
+    EX2 --> OP2[Operación]
+    OP2 --> EXPR6[Expresión]
+    EXPR6 --> DOS[2]
+    OP2 --> OPER2[Operador]
+    OPER2 --> igu["✍️"]
+    OP2 --> EXPR7[Expresión]
+    EXPR7 --> CERO[0]
     C1 --> parIzq1["("]
     
     C1 --> B3[Bloque]
