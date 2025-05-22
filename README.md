@@ -95,8 +95,8 @@ Texto          → Variable | Número
 <Instrucción> ::= <Imprimir> | <Declaracion> | <Bucle> | <Condicional>
 <Imprimir>    ::= 😀 <Expresión>
 <Declaracion> ::= 🍿 <Variable> <Expresión>
-<Bucle>       ::= 🔁 <Expresión> <Bloque>
-<Condicional> ::= 🤔 <Operación> <Bloque> [🙁 <Bloque>]
+<Bucle>       ::= 🔁 <Expresión> (<Bloque>)
+<Condicional> ::= 🤔 <Operación> (<Bloque>) [🙁 <Bloque>]
 <Expresión>   ::= 🔤<Texto>🔤 | <Variable> | <Número> | <Operación>
 <Operación>   ::= <Expresión> <Operador> <Expresión>
 <Operador>    ::= ➕ | ➖ | ✖️ | ➗ | ✍️ | 🚮
@@ -119,11 +119,11 @@ Imprimir     = 😀 Expresión;
 
 Declaración  = 🍿 Variable Expresión  
 
-Bucle        = 🔁 Expresión Bloque
+Bucle        = 🔁 Expresión (Bloque)
 
-Condicional  = 🤔 Operación Bloque [🙁 Bloque]
+Condicional  = 🤔 Operación (Bloque) [🙁 (Bloque)]
 
-Expresión    = 🔤Texto🔤 | Variable | Número | Operación | "(" Expresión ")"
+Expresión    = 🔤Texto🔤 | Variable | Número | Operación |  Expresión 
 
 Operación    = Expresión Operador Expresión
 
@@ -155,14 +155,14 @@ bloque : instruccion
 
 instruccion : 😀 expresion  
               🍿 variable expresion  
-              🔁 expresion bloque  
-              🤔 Operación bloque 🙁 bloque
+              🔁 expresion (bloque)  
+              🤔 Operación (bloque) 🙁 (bloque)
 
 expresion : 🔤 cadena 🔤 
             numero
             variable
             operacion
-            ( expresion )
+            expresion 
 
 numero : signo _op 
          digito _op
