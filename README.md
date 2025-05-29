@@ -310,6 +310,14 @@ graph TD
 ![image](https://github.com/AgusCuevas/Caracteristicas_Lenguajes_Programacion/blob/main/Diagramas%20sint%C3%A1cticos%20P4.jpeg)
 
 # TP 5
+
+# Parámetros
+- Son identificadores utilizados para recibir valores o referencias cuando se invoca una función o procedimiento.
+
+- Actúan como variables locales dentro del contexto de una función.
+
+- Su binding (ligadura) puede analizarse desde distintas perspectivas:
+
 # Tipos de *Binding* en Parámetros
 
 | **Binding** | **¿Qué define?** | **Estático** | **Dinámico** | **Diferencia entre Estático y Dinámico** | **Ejemplos** |
