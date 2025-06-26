@@ -450,11 +450,15 @@ FIN.
                 | <condicion> <operador_logico> <condicion>
                 | <booleano> | <identificador>
 
-<valor> ::= <numero> | <texto> | <identificador> | <booleano> | <valor> + <valor>
+<valor> ::= <termino> | <valor> <operador_aritmetico> <termino>
+
+<termino> ::= <numero> | <texto> | <identificador> | <booleano>
 
 <booleano> ::= verdadero | falso
 
 <operador> ::= == | != | < | > | <= | >=
+
+<operador_aritmetico> ::= + | - | * | /
 
 <operador_logico> ::= y | o
 
