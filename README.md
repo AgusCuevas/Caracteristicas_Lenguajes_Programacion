@@ -347,7 +347,7 @@ FIN.
 ```
 
 ## Sentencias
-### Sentencia de asignación (declarativa)
+### Asignación
 Se utiliza la palabra clave **anotar** para guardar un valor en una variable.
 
 ```
