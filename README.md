@@ -426,3 +426,40 @@ evaluar notaFinal >= 6
 
 FIN.
 ```
+
+## BNF
+
+<programa> ::= INICIO <sentencias> FIN.
+
+<sentencias> ::= <sentencia> <sentencias> | λ
+
+<sentencia> ::= <asignacion>
+              | <impresion>
+              | <condicional>
+              | <iteracion>
+
+<asignacion> ::= anotar <identificador> = <valor>
+
+<impresion> ::= mostrar <valor>
+
+<condicional> ::= evaluar <condicion> <bloque_condicional>
+
+<bloque_condicional> ::= si pasa: <sentencias> si no pasa: <sentencias>
+
+<iteracion> ::= mientras <condicion> hacer <sentencias>
+
+<condicion> ::= <identificador> <operador> <valor>
+
+<valor> ::= <numero> | <texto> | <identificador>
+
+<operador> ::= == | != | < | > | <= | >=
+
+<numero> ::= <digito> { <digito> }
+
+<texto> ::= '"' { <letra> |  <digito> } '"'
+
+<identificador> ::= <letra> { <letra> | <digito> | _ }
+
+<letra> ::= a | b | ... | z | A | B | ... | Z
+
+<digito> ::= 0 | 1 | ... | 9
