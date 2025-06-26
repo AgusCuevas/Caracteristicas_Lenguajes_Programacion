@@ -363,7 +363,7 @@ anotar nota notaLucia = 10
 anotar bool estadoFinal = aprobado
 ```
 ### Impresión
-Se utiliza la palabra clave **mostrar** para imprimir un mensaje o variable.
+Se utiliza la palabra clave **mostrar** para imprimir un mensaje, una variable o una expresión que combine múltiples elementos mediante el operador de concatenación **+**.
 
 ```
 mostrar valor
