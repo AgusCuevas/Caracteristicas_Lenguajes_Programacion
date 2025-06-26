@@ -335,11 +335,12 @@ Es un lenguaje de programación educativa, con palabras clave que refieren a sit
 
 ## Tipos de datos válidos
 - numero (ej. 0, 1, 3) → representa cualquier valor numérico
-- nota (ej. 8, 10) → representa un valor numérico  
+- nota (ej. 8, 10) →  valor entre 1 y 10, usado para calificaciones  
 - alumno (ej. "Lucía", "Martín") → representa un texto  
 - bool (ej. aprobado, desaprobado) → representa un valor booleano
 
 ## Estructura general de un programa
+Todo programa debe iniciar con la palabra clave INICIO y finalizar con FIN.. Las instrucciones se escriben entre ambas.
 ```
 INICIO 
 Sentencias...
@@ -375,7 +376,7 @@ mostrar notaFinal
 ```
 
 ### Condicional 
-Permite ejecutar código dependiendo de una condición.
+La estructura **evaluar** permite tomar decisiones según una condición lógica.
 
 ```
 evaluar condición
@@ -395,7 +396,7 @@ evaluar notaFinal >= 6
 ```
 
 ### Iteración 
-Permite repetir instrucciones mientras se cumpla una condición.
+La instrucción **mientras** repite un bloque de código mientras se cumpla la condición indicada.
 
 ```
 mientras condición hacer
@@ -416,7 +417,7 @@ INICIO
 
 anotar alumno nombre = "Lucía"
 anotar nota notaFinal = 8
-anotar bool estadoFinal = aprobado
+anotar bool estadoFinal = desaprobado
 
 mostrar "Evaluando a " + nombre
 
