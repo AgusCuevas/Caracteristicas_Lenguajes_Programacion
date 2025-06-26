@@ -444,7 +444,9 @@ FIN.
 
 <tipo> ::= numero | nota | alumno | bool
 
-<impresion> ::= mostrar <valor>
+<expresion_texto> ::= <valor_texto> | <valor_texto> + <expresion_texto>
+
+<valor_texto> ::= <texto> | <identificador> | <booleano> | <numero>
 
 <condicional> ::= evaluar <condicion> <bloque_condicional>
 
