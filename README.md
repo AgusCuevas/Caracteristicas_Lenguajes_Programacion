@@ -329,3 +329,100 @@ graph TD
 | **De nombre** | Es el identificador con el que se accede al parámetro dentro del cuerpo de la función. | El nombre está definido al declarar la función y no puede cambiar. | Se puede generar, modificar o usar indirectamente mediante programación dinámica o reflexiva. | En estático, el nombre es fijo. En dinámico, el nombre puede construirse o resolverse en ejecución. | **Estático**: `def saludar(nombre): print(nombre)`<br>**Dinámico**: `globals()['saludo'] = lambda x: print(x)` *(Python, nombre generado)* |
 | **De tipo de paso** | Indica la estrategia con la que se pasa el parámetro (valor, referencia, nombre, perezoso, etc.). | Se fija por el lenguaje o en la definición de la función. No varía al llamar. | Se determina en tiempo de ejecución o puede variar según el uso del parámetro. | Estático: el paso es siempre el mismo. Dinámico: puede elegirse o inferirse durante la ejecución. |  |
 
+## Lenguaje para parcial
+## Descripción
+Es un lenguaje de programación educativa. Su sintaxis es sencilla y utiliza palabras clave que refieren a situaciones del entorno académico..
+
+## Sentencias válidas
+### Sentencia de asignación (declarativa)
+Se utiliza la palabra clave **anotar** para guardar un valor en una variable.
+
+```
+anotar variable = valor
+```
+
+Ejemplos:
+
+```
+anotar alumno = "Lucía"
+anotar notaFinal = 8
+```
+### Sentencia de impresión
+Se utiliza la palabra clave **mostrar** para imprimir un mensaje o variable.
+
+```
+mostrar valor
+```
+
+Ejemplos:
+```
+mostrar "Alumno aprobado"
+mostrar notaFinal
+```
+
+### Sentencia condicional 
+Permite ejecutar código dependiendo de una condición.
+
+```
+evaluar condición
+    si pasa:
+        sentencias
+    si no pasa:
+        sentencias
+```
+
+Ejemplo:
+```
+evaluar notaFinal >= 6
+    si pasa:
+        mostrar "Aprobado"
+    si no pasa:
+        mostrar "Desaprobado"
+```
+
+### Sentencia de iteración 
+Permite repetir instrucciones mientras se cumpla una condición.
+
+```
+mientras condición hacer
+    sentencias
+```
+
+Ejemplo:
+```
+anotar i = 0
+mientras i < 3 hacer
+    mostrar "Corrigiendo examen"
+    anotar i = i + 1
+```
+
+## Tipos de datos válidos
+número (ej. 7, -1, 10)
+
+texto (ej. "Lucía", "Programación")
+
+## Estructura general de un programa
+```
+INICIO 
+Sentencias...
+FIN.
+```
+
+
+## Ejemplo completo
+```
+INICIO 
+
+anotar alumno = "Lucía"
+anotar notaFinal = 8
+
+mostrar "Evaluando a " + alumno
+
+evaluar notaFinal >= 6
+    si pasa:
+        mostrar "Aprobado"
+    si no pasa:
+        mostrar "Desaprobado"
+
+FIN.
+```
