@@ -446,7 +446,7 @@ FIN.
 
 <condicion> ::= <identificador> <operador> <valor>
 
-<valor> ::= <numero> | <texto> | <identificador>
+<valor> ::= <numero> | <texto> | <identificador> | <valor> + <valor>
 
 <operador> ::= == | != | < | > | <= | >=
 
