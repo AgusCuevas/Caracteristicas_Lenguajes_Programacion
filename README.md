@@ -334,11 +334,9 @@ graph TD
 Es un lenguaje de programación educativa, con palabras clave que refieren a situaciones del entorno académico..
 
 ## Tipos de datos válidos
-número (ej. 7, 1, 10)
-
-texto (ej. "Lucía", "Programación")
-
-Bool (ej. verdadero, falso)
+- nota (ej. 8, 10) → representa un valor numérico  
+- alumno (ej. "Lucía", "Martín") → representa un texto  
+- bool (ej. aprobado, desaprobado) → representa un valor booleano
 
 ## Estructura general de un programa
 ```
@@ -352,14 +350,15 @@ FIN.
 Se utiliza la palabra clave **anotar** para guardar un valor en una variable.
 
 ```
-anotar variable = valor
+anotar tipo variable = valor
 ```
 
 Ejemplos:
 
 ```
-anotar alumno = "Lucía"
-anotar notaFinal = 8
+anotar alumno nombreLucia = "Lucía"
+anotar nota notaLucia = 10
+anotar bool estadoFinal = aprobado
 ```
 ### Impresión
 Se utiliza la palabra clave **mostrar** para imprimir un mensaje o variable.
@@ -414,16 +413,18 @@ mientras cantidadDeExamenes < 3 hacer
 ```
 INICIO 
 
-anotar alumno = "Lucía"
-anotar notaFinal = 8
+anotar alumno nombre = "Lucía"
+anotar nota notaFinal = 8
+anotar bool estadoFinal = aprobado
 
-mostrar "Evaluando a " + alumno
+mostrar "Evaluando a " + nombre
 
 evaluar notaFinal >= 6
     si pasa:
-        mostrar "Aprobado"
+        anotar estadoFinal = aprobado
     si no pasa:
-        mostrar "Desaprobado"
+        anotar estadoFinal = desaprobado
+    mostrar nombre + " está " + estadoFinal
 
 FIN.
 ```
@@ -436,7 +437,10 @@ FIN.
 
 <sentencia> ::= <asignacion> | <impresion> | <condicional> | <iteracion>
 
-<asignacion> ::= anotar <identificador> = <valor>
+<asignacion> ::= anotar <tipo_educativo> <identificador> = <valor>
+               | anotar <identificador> = <valor>
+
+<tipo_educativo> ::= nota | alumno | bool
 
 <impresion> ::= mostrar <valor>
 
@@ -446,25 +450,25 @@ FIN.
 
 <iteracion> ::= mientras <condicion> hacer <sentencias>
 
-<condicion> ::= <identificador> <operador> <valor>
-                | <condicion> <operador_logico> <condicion>
-                | <booleano> | <identificador>
+<condicion> ::= <identificador> <operador_relacional> <valor>
+              | <condicion> <operador_logico> <condicion>
+              | <booleano> | <identificador>
 
 <valor> ::= <termino> | <valor> <operador_aritmetico> <termino>
 
 <termino> ::= <numero> | <texto> | <identificador> | <booleano>
 
-<booleano> ::= verdadero | falso
-
-<operador> ::= == | != | < | > | <= | >=
+<booleano> ::= aprobado | desaprobado
 
 <operador_aritmetico> ::= + | - | * | /
+
+<operador_relacional> ::= == | != | < | > | <= | >=
 
 <operador_logico> ::= y | o
 
 <numero> ::= <digito> { <digito> }
 
-<texto> ::= '"' { <letra> |  <digito> } '"'
+<texto> ::= '"' { <letra> | <digito> } '"'
 
 <identificador> ::= <letra> { <letra> | <digito> | _ }
 
