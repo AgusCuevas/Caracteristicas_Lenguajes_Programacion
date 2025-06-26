@@ -331,10 +331,10 @@ graph TD
 
 ## Lenguaje para parcial
 ## Descripción
-Es un lenguaje de programación educativa. Su sintaxis es sencilla y utiliza palabras clave que refieren a situaciones del entorno académico..
+Es un lenguaje de programación educativa, con palabras clave que refieren a situaciones del entorno académico..
 
 ## Tipos de datos válidos
-número (ej. 7, -1, 10)
+número (ej. 7, 1, 10)
 
 texto (ej. "Lucía", "Programación")
 
