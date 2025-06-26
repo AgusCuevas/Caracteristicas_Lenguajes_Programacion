@@ -338,7 +338,7 @@ número (ej. 7, 1, 10)
 
 texto (ej. "Lucía", "Programación")
 
-Bool (ej. Aprobado, "Desaprobado")
+Bool (ej. verdadero, falso)
 
 ## Estructura general de un programa
 ```
