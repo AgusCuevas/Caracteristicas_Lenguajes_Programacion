@@ -428,7 +428,7 @@ FIN.
 ```
 
 ## BNF
-
+```
 <programa> ::= INICIO <sentencias> FIN.
 
 <sentencias> ::= <sentencia> <sentencias> | λ
@@ -463,3 +463,4 @@ FIN.
 <letra> ::= a | b | ... | z | A | B | ... | Z
 
 <digito> ::= 0 | 1 | ... | 9
+```
