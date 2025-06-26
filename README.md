@@ -377,7 +377,7 @@ mostrar notaFinal
 
 ### Condicional 
 La estructura **evaluar** permite tomar decisiones según una condición lógica.
-
+La rama *si no pasa:* es opcional y solo debe incluirse cuando se desea especificar qué ocurre si la condición no se cumple.
 ```
 evaluar condición
     si pasa:
