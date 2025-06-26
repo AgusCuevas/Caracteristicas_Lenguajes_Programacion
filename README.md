@@ -433,10 +433,7 @@ FIN.
 
 <sentencias> ::= <sentencia> <sentencias> | λ
 
-<sentencia> ::= <asignacion>
-              | <impresion>
-              | <condicional>
-              | <iteracion>
+<sentencia> ::= <asignacion> | <impresion> | <condicional> | <iteracion>
 
 <asignacion> ::= anotar <identificador> = <valor>
 
