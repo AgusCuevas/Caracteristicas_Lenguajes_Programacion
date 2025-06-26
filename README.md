@@ -334,6 +334,7 @@ graph TD
 Es un lenguaje de programación educativa, con palabras clave que refieren a situaciones del entorno académico..
 
 ## Tipos de datos válidos
+- numero (ej. 0, 1, 3) → representa cualquier valor numérico
 - nota (ej. 8, 10) → representa un valor numérico  
 - alumno (ej. "Lucía", "Martín") → representa un texto  
 - bool (ej. aprobado, desaprobado) → representa un valor booleano
@@ -403,7 +404,7 @@ mientras condición hacer
 
 Ejemplo:
 ```
-anotar cantidadDeExamenes = 0
+anotar numero cantidadDeExamenes = 0
 mientras cantidadDeExamenes < 3 hacer
     mostrar "Corrigiendo examenes"
     anotar cantidadDeExamenes = cantidadDeExamenes + 1
