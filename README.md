@@ -333,7 +333,7 @@ graph TD
 ## Descripción
 Es un lenguaje de programación educativa. Su sintaxis es sencilla y utiliza palabras clave que refieren a situaciones del entorno académico..
 
-## Sentencias válidas
+## Sentencias
 ### Sentencia de asignación (declarativa)
 Se utiliza la palabra clave **anotar** para guardar un valor en una variable.
 
