@@ -338,6 +338,8 @@ número (ej. 7, 1, 10)
 
 texto (ej. "Lucía", "Programación")
 
+Bool (ej. Aprobado, "Desaprobado")
+
 ## Estructura general de un programa
 ```
 INICIO 
@@ -446,7 +448,9 @@ FIN.
 
 <condicion> ::= <identificador> <operador> <valor>
 
-<valor> ::= <numero> | <texto> | <identificador> | <valor> + <valor>
+<valor> ::= <numero> | <texto> | <identificador> | <booleano> | <valor> + <valor>
+
+<booleano> ::= verdadero | falso
 
 <operador> ::= == | != | < | > | <= | >=
 
