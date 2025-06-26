@@ -406,7 +406,7 @@ anotar i = 0
 mientras i < 3 hacer
     mostrar "Corrigiendo examen"
     anotar i = i + 1
-``
+```
 
 ## Ejemplo completo
 ```
