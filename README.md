@@ -402,9 +402,9 @@ mientras condición hacer
 
 Ejemplo:
 ```
-anotar i = 0
-mientras i < 3 hacer
-    mostrar "Corrigiendo examen"
+anotar cantidadDeExamenes = 0
+mientras cantidadDeExamenes < 3 hacer
+    mostrar "Corrigiendo examenes"
     anotar i = i + 1
 ```
 
