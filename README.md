@@ -438,10 +438,10 @@ FIN.
 
 <sentencia> ::= <asignacion> | <impresion> | <condicional> | <iteracion>
 
-<asignacion> ::= anotar <tipo_educativo> <identificador> = <valor>
+<asignacion> ::= anotar <tipo> <identificador> = <valor>
                | anotar <identificador> = <valor>
 
-<tipo_educativo> ::= nota | alumno | bool
+<tipo> ::= numero | nota | alumno | bool
 
 <impresion> ::= mostrar <valor>
 
