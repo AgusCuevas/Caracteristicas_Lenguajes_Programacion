@@ -333,6 +333,18 @@ graph TD
 ## Descripción
 Es un lenguaje de programación educativa. Su sintaxis es sencilla y utiliza palabras clave que refieren a situaciones del entorno académico..
 
+## Tipos de datos válidos
+número (ej. 7, -1, 10)
+
+texto (ej. "Lucía", "Programación")
+
+## Estructura general de un programa
+```
+INICIO 
+Sentencias...
+FIN.
+```
+
 ## Sentencias
 ### Sentencia de asignación (declarativa)
 Se utiliza la palabra clave **anotar** para guardar un valor en una variable.
@@ -347,7 +359,7 @@ Ejemplos:
 anotar alumno = "Lucía"
 anotar notaFinal = 8
 ```
-### Sentencia de impresión
+### Impresión
 Se utiliza la palabra clave **mostrar** para imprimir un mensaje o variable.
 
 ```
@@ -360,7 +372,7 @@ mostrar "Alumno aprobado"
 mostrar notaFinal
 ```
 
-### Sentencia condicional 
+### Condicional 
 Permite ejecutar código dependiendo de una condición.
 
 ```
@@ -380,7 +392,7 @@ evaluar notaFinal >= 6
         mostrar "Desaprobado"
 ```
 
-### Sentencia de iteración 
+### Iteración 
 Permite repetir instrucciones mientras se cumpla una condición.
 
 ```
@@ -394,20 +406,7 @@ anotar i = 0
 mientras i < 3 hacer
     mostrar "Corrigiendo examen"
     anotar i = i + 1
-```
-
-## Tipos de datos válidos
-número (ej. 7, -1, 10)
-
-texto (ej. "Lucía", "Programación")
-
-## Estructura general de un programa
-```
-INICIO 
-Sentencias...
-FIN.
-```
-
+``
 
 ## Ejemplo completo
 ```
