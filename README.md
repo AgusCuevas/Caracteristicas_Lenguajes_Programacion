@@ -407,7 +407,7 @@ Ejemplo:
 anotar cantidadDeExamenes = 0
 mientras cantidadDeExamenes < 3 hacer
     mostrar "Corrigiendo examenes"
-    anotar i = i + 1
+    anotar cantidadDeExamenes = cantidadDeExamenes + 1
 ```
 
 ## Ejemplo completo
@@ -447,12 +447,16 @@ FIN.
 <iteracion> ::= mientras <condicion> hacer <sentencias>
 
 <condicion> ::= <identificador> <operador> <valor>
+                | <condicion> <operador_logico> <condicion>
+                | <booleano> | <identificador>
 
 <valor> ::= <numero> | <texto> | <identificador> | <booleano> | <valor> + <valor>
 
 <booleano> ::= verdadero | falso
 
 <operador> ::= == | != | < | > | <= | >=
+
+<operador_logico> ::= y | o
 
 <numero> ::= <digito> { <digito> }
 
