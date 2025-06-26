@@ -447,7 +447,8 @@ FIN.
 
 <condicional> ::= evaluar <condicion> <bloque_condicional>
 
-<bloque_condicional> ::= si pasa: <sentencias> si no pasa: <sentencias>
+<bloque_condicional> ::= si pasa: <sentencias>
+                        |si pasa: <sentencias> si no pasa: <sentencias>
 
 <iteracion> ::= mientras <condicion> hacer <sentencias>
 
