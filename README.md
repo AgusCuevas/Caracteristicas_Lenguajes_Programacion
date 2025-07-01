@@ -331,13 +331,13 @@ graph TD
 
 ## Lenguaje para parcial
 ## Descripción
-Es un lenguaje de programación educativa, con palabras clave que refieren a situaciones del entorno académico..
+Es un lenguaje de programación educativa, con palabras clave que se relacionan a situaciones del entorno académico. Está diseñado para ser simple, legible y didáctico, permitiendo representar conceptos comunes como alumnos, notas, aprobaciones, etc.
 
 ## Tipos de datos válidos
-- numero (ej. 0, 1, 3) → representa cualquier valor numérico
+- numero (ej. 0, 1, 3) → representa cualquier valor numérico entero
 - nota (ej. 8, 10) →  valor entre 1 y 10, usado para calificaciones  
 - alumno (ej. "Lucía", "Martín") → representa un texto  
-- bool (ej. aprobado, desaprobado) → representa un valor booleano
+- bool (ej. si, no) → representa un valor booleano
 
 ## Estructura general de un programa
 Todo programa debe iniciar con la palabra clave INICIO y finalizar con FIN.. Las instrucciones se escriben entre ambas.
@@ -360,7 +360,7 @@ Ejemplos:
 ```
 anotar alumno nombreLucia = "Lucía"
 anotar nota notaLucia = 10
-anotar bool estadoFinal = aprobado
+anotar bool estaAprobado = si
 ```
 ### Impresión
 Se utiliza la palabra clave **mostrar** para imprimir un mensaje, una variable o una expresión que combine múltiples elementos mediante el operador de concatenación **+**.
@@ -413,22 +413,95 @@ mientras cantidadDeExamenes < 3 hacer
 
 ## Ejemplo completo
 ```
-INICIO 
+INICIO
 
-anotar alumno nombre = "Lucía"
-anotar nota notaFinal = 8
-anotar bool estadoFinal = desaprobado
+anotar numero indice = 1
+anotar numero sumaNotas = 0
+anotar numero totalAlumnos = 3
+anotar numero totalAprobados = 0
 
-mostrar "Evaluando a " + nombre
 
-evaluar notaFinal >= 6
+anotar alumno nombre1 = "Lucía"
+anotar nota nota1 = 9
+anotar bool estaAprobado1 = no
+
+anotar alumno nombre2 = "Martín"
+anotar nota nota2 = 6
+anotar bool estaAprobado2 = no
+
+anotar alumno nombre3 = "Sofía"
+anotar nota nota3 = 4
+anotar bool estaAprobado3 = no
+
+mostrar "Comenzando evaluación de " + totalAlumnos + " alumnos."
+
+mientras indice <= 3 hacer
+
+    evaluar indice == 1
+        si pasa:
+            mostrar "Evaluando a " + nombre1 + " con nota " + nota1
+            anotar sumaNotas = sumaNotas + nota1
+            evaluar nota1 >= 6
+                si pasa:
+                    anotar estaAprobado1 = si
+                    anotar totalAprobados = totalAprobados + 1
+                    mostrar nombre1 + " está aprobado"
+                si no pasa:
+                    mostrar nombre1 + " está desaprobado"
+
+    evaluar indice == 2
+        si pasa:
+            mostrar "Evaluando a " + nombre2 + " con nota " + nota2
+            anotar sumaNotas = sumaNotas + nota2
+            evaluar nota2 >= 6
+                si pasa:
+                    anotar estaAprobado2 = si
+                    anotar totalAprobados = totalAprobados + 1
+                    mostrar nombre2 + " está aprobado"
+                si no pasa:
+                    mostrar nombre2 + " está desaprobado"
+
+    evaluar indice == 3
+        si pasa:
+            mostrar "Evaluando a " + nombre3 + " con nota " + nota3
+            anotar sumaNotas = sumaNotas + nota3
+            evaluar nota3 >= 6
+                si pasa:
+                    anotar estaAprobado3 = si
+                    anotar totalAprobados = totalAprobados + 1
+                    mostrar nombre3 + " está aprobado"
+                si no pasa:
+                    mostrar nombre3 + " está desaprobado"
+
+    anotar indice = indice + 1
+
+anotar numero promedio = sumaNotas / totalAlumnos
+
+mostrar "Evaluación finalizada."
+mostrar "Cantidad de aprobados: " + totalAprobados
+mostrar "Promedio de notas: " + promedio
+
+evaluar estaAprobado1 y estaAprobado2 y estaAprobado3
     si pasa:
-        anotar estadoFinal = aprobado
+        mostrar "¡Todos los alumnos aprobaron!"
     si no pasa:
-        anotar estadoFinal = desaprobado
-    mostrar nombre + " está " + estadoFinal
+        mostrar "No todos aprobaron."
 
 FIN.
+```
+## Salida:
+```
+Comenzando evaluación de 3 alumnos.
+Evaluando a Lucía con nota 9
+Lucía está aprobado
+Evaluando a Martín con nota 6
+Martín está aprobado
+Evaluando a Sofía con nota 4
+Sofía está desaprobado
+Evaluación finalizada.
+Cantidad de aprobados: 2
+Promedio de notas: 6
+No todos aprobaron.
 ```
 
 ## BNF
@@ -463,7 +536,7 @@ FIN.
 
 <termino> ::= <numero> | <texto> | <identificador> | <booleano>
 
-<booleano> ::= aprobado | desaprobado
+<booleano> ::= si |  no
 
 <operador_aritmetico> ::= + | - | * | /
 
