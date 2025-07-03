@@ -349,7 +349,7 @@ FIN.
 
 ## Sentencias
 ### Asignación
-Se utiliza la palabra clave **anotar** para guardar un valor en una variable.
+Se utiliza la palabra clave **anotar** para guardar un valor en una variable. El valor a guardar debe declararse al momento de crear la variable, no es valido generar una variable nula.
 
 ```
 anotar tipo variable = valor
@@ -362,6 +362,7 @@ anotar alumno nombreLucia = "Lucía"
 anotar nota notaLucia = 10
 anotar bool estaAprobado = si
 ```
+Es importante tener en cuenta que para la asignacion de variables el Identificador de la misma debe comenzar siempre con una letra, seguida de letras o numeros.
 ### Impresión
 Se utiliza la palabra clave **mostrar** para imprimir un mensaje, una variable o una expresión que combine múltiples elementos mediante el operador de concatenación **+**.
 
