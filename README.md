@@ -339,6 +339,10 @@ Es un lenguaje de programación educativa, con palabras clave que se relacionan 
 - alumno (ej. "Lucía", "Martín") → representa un texto  
 - bool (ej. si, no) → representa un valor booleano
 
+Consideraciones:
+- Se pueden realizar operaciones aritmeticas entre los tipos numero y notas, ya que, ambos son de tipo numericos.
+- El tipo bool puede evaluarse en operaciones condicionales o con operadores logicos (y/o).
+
 ## Estructura general de un programa
 Todo programa debe iniciar con la palabra clave INICIO y finalizar con FIN.. Las instrucciones se escriben entre ambas.
 ```
@@ -349,7 +353,7 @@ FIN.
 
 ## Sentencias
 ### Asignación
-Se utiliza la palabra clave **anotar** para guardar un valor en una variable. El valor a guardar debe declararse al momento de crear la variable, no es valido generar una variable nula.
+Se utiliza la palabra clave **anotar** para guardar un valor en una variable. El valor a guardar debe declararse al momento de crear la variable, no está permitido declarar una variable sin asignarle un valor inicial.
 
 ```
 anotar tipo variable = valor
@@ -365,6 +369,7 @@ anotar bool estaAprobado = si
 Es importante tener en cuenta que para la asignacion de variables el Identificador de la misma debe comenzar siempre con una letra, seguida de letras o numeros.
 ### Impresión
 Se utiliza la palabra clave **mostrar** para imprimir un mensaje, una variable o una expresión que combine múltiples elementos mediante el operador de concatenación **+**.
+Se puede realizar la concatenacion de diferentes tipos de datos.
 
 ```
 mostrar valor
